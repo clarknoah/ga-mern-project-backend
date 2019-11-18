@@ -1,0 +1,51 @@
+[
+  {
+    firstName:"Joshua",
+    lastName:"Neves",
+    tweeps:[
+      {
+        tweepContent:"Hello World",
+        comments:[
+          {
+            commentContent:"Great tweep",
+            commentAuthor:"MONGO USER ID"
+          }
+        ]
+
+      }
+    ]
+  },
+  {
+    firstName:"Noah",
+    lastName:"Clark",
+    tweeps:[
+      {
+        tweepContent:"Hello World",
+        comments:[
+          {
+            commentContent:"Great tweep",
+            commentAuthor:"MONGO USER ID"
+          }
+        ]
+
+      }
+    ]
+  }
+  },
+  {
+    firstName:"Jenna",
+    lastName:"LastName",
+    tweeps:[
+      {
+        tweepContent:"Hello World",
+        comments:[
+          {
+            commentContent:"Great tweep",
+            commentAuthor:"MONGO USER ID"
+          }
+        ]
+
+      }
+    ]
+  }
+]

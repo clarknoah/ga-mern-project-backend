@@ -1,0 +1,7 @@
+{
+  "name": "Tweeper API",
+  "version": "0.1.0",
+  "description": "apiDoc basic example",
+  "title": "Tweepet API",
+  "url" : "localhost:5555"
+}
