@@ -7,7 +7,3 @@ const Comment = new Schema({
 })
 
 module.exports = Comment;
-
-
-heroku config:set DB_URL="mongodb+srv://mongodb:<password>@cluster0-y3mxh.mongodb.net/test?retryWrites=true&w=majority
-"
