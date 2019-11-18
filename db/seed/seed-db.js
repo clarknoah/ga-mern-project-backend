@@ -1,8 +1,8 @@
 mongoose = require("../connection.js");
 const User = require("../models/User.js");
-const cJson = require("./tweeperData.json");
+const data = require("./tweeperData.js");
 
-const parsedCharacters = characterJson.map((val)=>{
+const parsedCharacters = data.map((val)=>{
   return val;
 })
 

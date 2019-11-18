@@ -6,7 +6,15 @@ const Schema = mongoose.Schema;
 const User = new Schema({
   firstName: String,
   lastName: String,
-  tweeps: [Tweep]
+  tweeps: [Tweep],
+  handle:{
+    type: String,
+    required:true,
+    unique: true
+  },
+  bio:String,
+  dateCreated:Date,
+  lastLogin: Date
 
 })
 

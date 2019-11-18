@@ -23,6 +23,37 @@ app.get('/',(req,res)=>{
 })
 
 
+app.post('/login',(req,res)=>{
+  let user = req.body;
+  User.find(user)
+    .then(result=>{
+      console.log(result);
+      res.json(result);
+    })
+})
+
+app.post('/user',(req,res)=>{
+  let user = req.body;
+  User.create(user)
+    .then(result=>{
+      console.log(result);
+      res.json(result);
+    })
+})
+
+
+app.get('/user/:handle',(req,res)=>{
+  let handle = req.params.handle;
+  let user = req.body;
+  User.find({handle:handle})
+    .then(result=>{
+      console.log(result);
+      res.json(result);
+    })
+})
+
+
+
 
 app.set("port", process.env.PORT || 5555);
 

@@ -1,7 +1,8 @@
-[
+let data = [
   {
     firstName:"Joshua",
     lastName:"Neves",
+    handle:"awesomeGuy",
     tweeps:[
       {
         tweepContent:"Hello World",
@@ -18,6 +19,7 @@
   {
     firstName:"Noah",
     lastName:"Clark",
+    handle:"okGuy",
     tweeps:[
       {
         tweepContent:"Hello World",
@@ -30,11 +32,11 @@
 
       }
     ]
-  }
   },
   {
     firstName:"Jenna",
     lastName:"LastName",
+    handle:"goodGuy",
     tweeps:[
       {
         tweepContent:"Hello World",
@@ -48,4 +50,6 @@
       }
     ]
   }
-]
+];
+
+module.exports = data;
