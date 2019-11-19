@@ -57,5 +57,3 @@ const ctrl = {
 };
 
 module.exports = ctrl;
-
-// User.findOne({ id: req.body.myId }).select({ Friends: { $elemMatch: { id: req.body.id } } }),
