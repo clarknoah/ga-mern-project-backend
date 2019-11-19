@@ -8,6 +8,9 @@ router.get("/", (req, res) => {
   res.send("working");
 });
 
-router.put("/", ctrl.createTweep);
+// router.put("/", ctrl.createTweep);
 
+router.put("/user/:handle/tweeps", ctrl.createTweep);
+router.delete("/user/:handle/tweeps/:id", ctrl.deleteTweep);
+router.put("/user/:handle/tweeps/:id", ctrl.updateTweep);
 module.exports = router;
