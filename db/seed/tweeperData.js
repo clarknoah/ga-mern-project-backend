@@ -35,7 +35,7 @@ let data = [
   },
   {
     firstName:"Jenna",
-    lastName:"LastName",
+    lastName:"Dean",
     handle:"goodGuy",
     tweeps:[
       {

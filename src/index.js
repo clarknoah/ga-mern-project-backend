@@ -3,6 +3,8 @@ const app = express();
 const User = require("../db/models/User.js");
 const bodyParser = require("body-parser");
 
+const routes = require('./routes/index.js');
+
 app.use(bodyParser.urlencoded());
 
 app.use(bodyParser.json());
@@ -18,6 +20,8 @@ app.use(express.static('doc'));
  *
  * @apiSuccess {String} count Says Hello API
  */
+
+
 app.get('/',(req,res)=>{
   res.send("Hello API");
 })
@@ -31,6 +35,7 @@ app.post('/login',(req,res)=>{
       res.json(result);
     })
 })
+
 
 app.post('/user',(req,res)=>{
   let user = req.body;
