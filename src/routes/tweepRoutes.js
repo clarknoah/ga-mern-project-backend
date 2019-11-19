@@ -13,4 +13,6 @@ router.get("/", (req, res) => {
 router.put("/user/:handle/tweeps", ctrl.createTweep);
 router.delete("/user/:handle/tweeps/:id", ctrl.deleteTweep);
 router.put("/user/:handle/tweeps/:id", ctrl.updateTweep);
+router.get("/user/:handle/tweeps/:id", ctrl.showTweep);
+
 module.exports = router;
