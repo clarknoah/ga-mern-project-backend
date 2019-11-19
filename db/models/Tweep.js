@@ -6,8 +6,9 @@ const Schema = mongoose.Schema;
 const Tweep = new Schema({
   tweepContent:String,
   date:Number,
-  timestamp:Number,
-  //comments:[Comment]
+  timestamp:Date,
+  comments:[Comment],
+  likes:Number
 
 })
 

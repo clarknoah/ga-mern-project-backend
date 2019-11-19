@@ -2,7 +2,10 @@ const mongoose = require("../connection.js");
 const Schema = mongoose.Schema;
 
 const Comment = new Schema({
-  commentContent:String
+  commentContent:String,
+  authorId:String,
+  timestamp:Date,
+  likes:Number
 
 })
 
