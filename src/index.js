@@ -22,42 +22,39 @@ app.use(express.static('doc'));
  */
 
 
-app.get('/',(req,res)=>{
+app.get('/', (req, res) => {
   res.send("Hello API");
 })
 
-
-app.post('/login',(req,res)=>{
+app.post('/login', (req, res) => {
   let user = req.body;
   User.find(user)
-    .then(result=>{
+    .then(result => {
       console.log(result);
       res.json(result);
     })
 })
 
-
-app.post('/user',(req,res)=>{
+app.post('/user', (req, res) => {
   let user = req.body;
   User.create(user)
-    .then(result=>{
+    .then(result => {
       console.log(result);
       res.json(result);
     })
 })
 
-
-app.get('/user/:handle',(req,res)=>{
+app.get('/user/:handle', (req, res) => {
   let handle = req.params.handle;
   let user = req.body;
-  User.find({handle:handle})
-    .then(result=>{
+  User.find({ handle: handle })
+    .then(result => {
       console.log(result);
       res.json(result);
     })
 })
 
-
+app.use(routes)
 
 
 app.set("port", process.env.PORT || 5555);
