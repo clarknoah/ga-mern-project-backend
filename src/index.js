@@ -29,6 +29,8 @@ app.get('/',(req,res)=>{
 
 app.post('/login',(req,res)=>{
   let user = req.body;
+  console.log("Got User Login");
+  console.log(user);
   User.find(user)
     .then(result=>{
       console.log(result);
