@@ -2,8 +2,8 @@ const mongoose = require("../connection.js");
 const Comment = require("./Comment.js");
 const Schema = mongoose.Schema;
 
-
 const Tweep = new Schema({
+
   tweepContent:String,
   date:Number,
   timestamp:Date,
@@ -11,5 +11,6 @@ const Tweep = new Schema({
   likes:Number
 
 })
+
 
 module.exports = Tweep;

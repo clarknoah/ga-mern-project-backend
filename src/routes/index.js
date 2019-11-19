@@ -31,7 +31,8 @@ router.get("/user/:handle", (req, res) => {
   });
 });
 
-router.use("/user/:handle/tweeps", require("./tweepRoutes.js"));
+router.use(require("./tweepRoutes.js"));
+// router.use("/user/:handle", require("./tweepRoutes.js"));
 router.use("/user/:handle/tweeps/:tId", require("./tweepRoutes.js"));
 
 module.exports = router;
