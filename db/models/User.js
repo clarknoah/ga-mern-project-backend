@@ -7,15 +7,16 @@ const User = new Schema({
   firstName: String,
   lastName: String,
   tweeps: [Tweep],
-  handle:{
+  // tweeps: String,
+  handle: {
     type: String,
-    required:true,
+    required: true,
     unique: true
   },
-  bio:String,
-  dateCreated:Date,
-  lastLogin: Date
+  bio: String,
+  dateCreated: Date,
+  lastLogin: Date,
+  description: String
+});
 
-})
-
-module.exports = mongoose.model('user', User);
+module.exports = mongoose.model("user", User);

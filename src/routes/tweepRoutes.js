@@ -1,8 +1,13 @@
 const express = require("express");
-const router = express();
-const ctrl = require('../controllers/tweeps.js');
+const router = express.Router();
+const ctrl = require("../controllers/tweeps.js");
+//ctrl.createTweep
 
+router.get("/", (req, res) => {
+  console.log("The route is finalluy working");
+  res.send("working");
+});
 
-router.get('/user/:handle/tweeps', ctrl.createTweeps);
+router.put("/", ctrl.createTweep);
 
 module.exports = router;
