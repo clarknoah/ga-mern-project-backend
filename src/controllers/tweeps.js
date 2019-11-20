@@ -57,6 +57,17 @@ const ctrl = {
     ).then(tweeps => {
       res.json(tweeps.tweeps[0]);
     });
+  },
+
+  readTweeps: (req, res) => {
+    console.log("Reading Tweep");
+    User.findOne(
+      {
+        handle: req.params.handle
+      }
+    ).then(tweeps => {
+      res.json(tweeps.tweeps);
+    });
   }
 };
 

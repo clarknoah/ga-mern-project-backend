@@ -3,7 +3,12 @@ let data = [
     firstName:"Joshua",
     lastName:"Neves",
     handle:"awesomeGuy",
+    password:"123",
     description: "I'm a Cool Guy just looking to shine",
+    following:[
+      "okGuy",
+      "goodGuy",
+    ],
     tweeps:[
       {
         timestamp:new Date(), tweepContent:"Hello World",
@@ -26,8 +31,10 @@ let data = [
   {
     firstName:"Noah",
     lastName:"Clark",
+    password:"123",
     handle:"okGuy",
     description:"I love coding!",
+    following:['goodGuy'],
     tweeps:[
       {
         timestamp:new Date(), tweepContent:"Hello World",
@@ -67,6 +74,8 @@ let data = [
     firstName:"Jenna",
     lastName:"Dean",
     handle:"goodGuy",
+    password:"123",
+    following:[],
     description: "I'm the incarnation of happiness and joy",
     tweeps:[
       {

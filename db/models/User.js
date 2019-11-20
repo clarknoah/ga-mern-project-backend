@@ -6,6 +6,8 @@ const Schema = mongoose.Schema;
 const User = new Schema({
   firstName: String,
   lastName: String,
+  password:String,
+  following:[String],
   tweeps: [Tweep],
   handle: {
     type: String,

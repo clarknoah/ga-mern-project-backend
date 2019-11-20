@@ -3,6 +3,7 @@ const User = require("../../db/models/User");
 const ctrl = {
   createUser: (req, res) => {
     console.log("Creating User");
+    let user = req.body;
     User.create(user).then(result => {
       console.log(result);
       res.json(result);
