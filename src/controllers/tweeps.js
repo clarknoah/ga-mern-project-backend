@@ -16,6 +16,7 @@ const ctrl = {
     console.log(req);
   },
   deleteTweep: (req, res) => {
+    console.log("deleting");
     User.update(
       {
         handle: req.params.handle
