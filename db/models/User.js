@@ -7,7 +7,6 @@ const User = new Schema({
   firstName: String,
   lastName: String,
   tweeps: [Tweep],
-  // tweeps: String,
   handle: {
     type: String,
     required: true,
