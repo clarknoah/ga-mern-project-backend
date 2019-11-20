@@ -106,7 +106,9 @@ This is an example object from the API:
 ## Authors
 
  **Noah Clark** - Front End / Deployment
+ 
  **Jenna Dean** - Backend / Design
+ 
  **Josh Neves** - Design / Project Management
 
 
