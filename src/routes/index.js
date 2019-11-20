@@ -32,7 +32,6 @@ router.get("/user/:handle", (req, res) => {
 });
 
 router.use(require("./tweepRoutes.js"));
-// router.use("/user/:handle", require("./tweepRoutes.js"));
 router.use(require("./commentRoutes.js"));
 
 module.exports = router;

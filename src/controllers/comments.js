@@ -5,14 +5,33 @@ const ctrl = {
     User.findOneAndUpdate(
       {
         handle: req.params.handle,
-        "tweep._id": req.params.id
+        "tweeps._id": req.params.id
       },
       {
         $push: {
-          comments: req.body
+          "tweeps.$.comments": req.body
+        }
+      },
+      { new: true }
+    ).then(comments => {
+      res.json(comments);
+    });
+  },
+  deleteComment: (req, res) => {
+    User.updateOne(
+      {
+        handle: req.params.handle,
+        "tweeps._id": req.params.id
+      },
+      {
+        $pull: {
+          "tweeps.$.comments": {
+            _id: req.params.cId
+          }
         }
       }
     ).then(comments => {
+      console.log(comments);
       res.json(comments);
     });
   }
