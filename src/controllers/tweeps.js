@@ -2,6 +2,7 @@ const User = require("../../db/models/User");
 
 const ctrl = {
   createTweep: (req, res) => {
+    console.log("Creating Tweep");
     User.findOneAndUpdate(
       { handle: req.params.handle },
       {
@@ -16,7 +17,7 @@ const ctrl = {
     console.log(req);
   },
   deleteTweep: (req, res) => {
-    console.log("deleting");
+    console.log("deleting tweep");
     User.update(
       {
         handle: req.params.handle
@@ -33,6 +34,7 @@ const ctrl = {
     });
   },
   updateTweep: (req, res) => {
+    console.log("Updating Tweep");
     User.findOneAndUpdate(
       { handle: req.params.handle, "tweeps._id": req.params.id },
       {
@@ -44,7 +46,8 @@ const ctrl = {
       res.json(tweeps);
     });
   },
-  showTweep: (req, res) => {
+  readTweep: (req, res) => {
+    console.log("Reading Tweep");
     User.findOne(
       {
         handle: req.params.handle,

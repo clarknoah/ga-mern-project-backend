@@ -8,6 +8,8 @@ router.get("/", (req, res) => {
 });
 
 router.post("/user/:handle/tweeps/:id/comments", ctrl.createComment);
-router.delete("/user/:handle/tweeps/:id/comments/:cId", ctrl.createComment);
+router.delete("/user/:handle/tweeps/:id/comments/:cId", ctrl.deleteComment);
+router.get("/user/:handle/tweeps/:id/comments/:cId", ctrl.readComment);
+router.put("/user/:handle/tweeps/:id/comments/:cId", ctrl.updateComment);
 
 module.exports = router;

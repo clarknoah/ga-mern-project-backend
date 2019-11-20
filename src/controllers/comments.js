@@ -2,6 +2,7 @@ const User = require("../../db/models/User");
 
 const ctrl = {
   createComment: (req, res) => {
+    console.log("Creating Comment");
     User.findOneAndUpdate(
       {
         handle: req.params.handle,
@@ -18,6 +19,7 @@ const ctrl = {
     });
   },
   deleteComment: (req, res) => {
+    console.log("Deleting Comment");
     User.updateOne(
       {
         handle: req.params.handle,
@@ -34,7 +36,41 @@ const ctrl = {
       console.log(comments);
       res.json(comments);
     });
+  },
+  updateComment: (req, res) => {
+    console.log("Updating Comment");
+    User.findOne(
+      {
+        handle: req.params.handle,
+        "tweeps.comments._id": req.params.cId
+      }
+    ).then(comments => {
+      comments.tweeps
+        .id(req.params.id)
+        .comments
+        .id(req.params.cId)
+        .commentContent = req.body.commentContent;
+      comments.save();
+      console.log(comments.tweeps.id(req.params.id).comments.id(req.params.cId));
+      res.json(comments);
+    });
+  },
+  readComment: (req, res) => {
+    console.log("Reading Comment");
+    User.findOne(
+      {
+        "tweeps._id":req.params.id,
+        "tweeps.comments._id":req.params.cId
+      },
+      {"tweeps.comments.$":1}
+    ).then(comments => {
+      comments = comments.tweeps[0].comments.filter((val)=>{
+        return val._id.toString() == req.params.cId.toString()
+      })
+      res.json(comments[0]);
+    });
   }
 };
+
 
 module.exports = ctrl;
