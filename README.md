@@ -37,7 +37,6 @@ A Twitter like clone application with the ability to read, create, delete and up
    Bronze:
    - Send pictures as tweep
   
-   
 ### Initial Design Layout
 <img width="780" alt="tweeper-mock" src="https://media.git.generalassemb.ly/user/22371/files/01cee900-09fb-11ea-9ca7-cad5e8dbe0ae">
 
@@ -63,7 +62,6 @@ Give the example
 ## Running the tests
 
 Explain how to run the automated tests for this system
-
 
 ## Example
 This is an example object from the API:
@@ -100,7 +98,7 @@ This is an example object from the API:
 
 ## Authors
 
- **Noah Clark** - Front End / Deployment
+ **Noah Clark** - Full Stack / Deployment
  
  **Jenna Dean** - Backend / Design
  
