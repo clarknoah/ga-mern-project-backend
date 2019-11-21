@@ -7,14 +7,13 @@ const ctrl = {
       { handle: req.params.handle },
       {
         $push: {
-          followingo: req.body.follow
+          following: req.body.follow
         }
       },
       { new: true }
     ).then(tweeps => {
       res.json(tweeps);
     });
-    console.log(req);
   },
   unfollowUser: (req, res) => {
     console.log("Unfollowing User");
