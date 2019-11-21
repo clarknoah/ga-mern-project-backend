@@ -1,6 +1,9 @@
+const User = require("../../db/models/User");
+
 const ctrl = {
   createComment: (req, res) => {
     console.log("Creating Comment");
+    console.log(req.body);
     User.findOneAndUpdate(
       {
         handle: req.params.handle,
