@@ -1,9 +1,10 @@
+const User = require("../../db/models/User");
 
-<<<<<<< HEAD
-=======
+
 const ctrl = {
   createComment: (req, res) => {
     console.log("Creating Comment");
+    console.log(req.body);
     User.findOneAndUpdate(
       {
         handle: req.params.handle,
@@ -75,4 +76,3 @@ const ctrl = {
 
 
 module.exports = ctrl;
->>>>>>> c19fb596092599037ca9c8cdba5e2b8eaea312bb

@@ -1,6 +1,32 @@
 const User = require("../../db/models/User");
 
 const ctrl = {
+  searchUsers: (req, res) => {
+
+    console.log("searching for user");
+    let user = req.body;
+    console.log(user);
+    User.find({
+      handle:{$regex : `.*${req.body.handle}.*`}
+    }).then(result => {
+      console.log(result);
+
+      User.aggregate([
+        {$unwind:"$tweeps"},
+        {$match:
+          {"tweeps.tweepContent":{$regex : `.*${req.body.handle}.*`}
+        }
+      }]).then(res2=>{
+        console.log(res2);
+        let final = {
+          users: result,
+          tweeps: res2
+        }
+        res.json(final);
+      })
+
+    });
+  },
   createUser: (req, res) => {
     console.log("Creating User");
     let user = req.body;

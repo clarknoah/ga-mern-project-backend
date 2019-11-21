@@ -1,6 +1,11 @@
 const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
+const session = require('express-session');
+
+app.use(session({ secret: 'this-is-a-secret-token', cookie: { maxAge: 60000 }}));
+
+
 
 app.use(bodyParser.urlencoded());
 

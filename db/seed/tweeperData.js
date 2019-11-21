@@ -11,16 +11,18 @@ let data = [
     ],
     tweeps:[
       {
-        timestamp:new Date(), tweepContent:"Hello World",
+        authorHandle:"awesomeGuy",
+        timestamp:new Date(),
+        tweepContent:"Hello World",
         comments:[
           {
             commentContent:"Great tweep",
-            authorId:"MONGO USER ID",
+            authorHandle:"okGuy",
             timestamp:new Date
           },
           {
             commentContent:"Great tweep",
-            authorId:"MONGO USER ID",
+            authorHandle:"goodGuy",
             timestamp:new Date
           }
         ]
@@ -37,32 +39,35 @@ let data = [
     following:['goodGuy'],
     tweeps:[
       {
-        timestamp:new Date(), tweepContent:"Hello World",
+        authorHandle:"okGuy",
+        timestamp:new Date(),
+        tweepContent:"Hello World",
         comments:[
           {
             commentContent:"Great tweep",
-            authorId:"MONGO USER ID",
+            authorHandle:"goodGuy",
             timestamp:new Date
           },
           {
             commentContent:"Great tweep",
-            authorId:"MONGO USER ID",
+            authorHandle:"goodGuy",
             timestamp:new Date
           }
         ]
 
       },
       {
+        authorHandle:"okGuy",
         timestamp:new Date(), tweepContent:"Hello World Part 2",
         comments:[
           {
             commentContent:"Great tweep",
-            authorId:"MONGO USER ID",
+            authorHandle:"goodGuy",
             timestamp:new Date
           },
           {
             commentContent:"Great tweep",
-            authorId:"MONGO USER ID",
+            authorHandle:"goodGuy",
             timestamp:new Date
           }
         ]
@@ -79,49 +84,52 @@ let data = [
     description: "I'm the incarnation of happiness and joy",
     tweeps:[
       {
+        authorHandle:"goodGuy",
         timestamp:new Date(), tweepContent:"Hello World",
         comments:[
           {
             commentContent:"Great tweep",
-            authorId:"MONGO USER ID",
+            authorHandle:"MONGO USER ID",
             timestamp:new Date,
 
           },
           {
             commentContent:"Great tweep",
-            authorId:"MONGO USER ID",
+            authorHandle:"MONGO USER ID",
             timestamp:new Date
           }
         ]
 
       },
       {
+        authorHandle:"goodGuy",
         timestamp:new Date(), tweepContent:"Hello World For Real",
         comments:[
           {
             commentContent:"Great tweep",
-            authorId:"MONGO USER ID",
+            authorHandle:"MONGO USER ID",
             timestamp:new Date
           },
           {
             commentContent:"Great tweep",
-            authorId:"MONGO USER ID",
+            authorHandle:"MONGO USER ID",
             timestamp:new Date
           }
         ]
 
       },
       {
+        authorHandle:"goodGuy",
         timestamp:new Date(), tweepContent:"Hello World For Show",
         comments:[
           {
             commentContent:"Great tweep",
-            authorId:"MONGO USER ID",
+            authorHandle:"MONGO USER ID",
             timestamp:new Date
           },
           {
             commentContent:"Great tweep",
-            authorId:"MONGO USER ID",
+            authorHandle:"MONGO USER ID",
             timestamp:new Date
           }
         ]

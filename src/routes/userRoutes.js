@@ -8,6 +8,7 @@ router.get("/", (req, res) => {
 });
 
 router.post("/user", ctrl.createUser);
+router.post("/searchUsers", ctrl.searchUsers);
 router.delete("/user/:handle", ctrl.deleteUser);
 router.get("/user/:handle", ctrl.readUser);
 router.put("/user/:handle", ctrl.updateUser);
