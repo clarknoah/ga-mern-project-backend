@@ -4,11 +4,11 @@ A Twitter like clone application with the ability to read, create, delete and up
 
 ## Planning and Design
 #### App Plan
-   1. Design Twitter Like App
+   1. Design Twitter Like application
    2. Incorporate Jest for Unit Testing
-   3. Build Full CRUD (Create, Read, Update, Delete) capability with Interface
-   4. Seperate Backend and Frontend into different Github Repos
-   5. Have two Non-User Models
+   3. Build Full CRUD (Create, Read, Update, Delete) capability with interface
+   4. Seperate backend and frontend into different Github repos
+   5. Have two non-user models
    6. Use MongoDB as NOSQL database
    
 #### Back end Requirements
@@ -29,12 +29,14 @@ A Twitter like clone application with the ability to read, create, delete and up
      
   Silver:
   - Add profile pictures
-  - Add "like" button
+  
+  Gold:
+  - "like" button
     
 #### Tier 1
    Bronze:
    - Send pictures as tweep
-   - Send 
+  
    
 ### Initial Design Layout
 <img width="780" alt="tweeper-mock" src="https://media.git.generalassemb.ly/user/22371/files/01cee900-09fb-11ea-9ca7-cad5e8dbe0ae">
@@ -61,15 +63,6 @@ Give the example
 ## Running the tests
 
 Explain how to run the automated tests for this system
-
-
-### API Database
-
-| Query | Path | Description | Additional Information |
-|:--------:|:-------:| ------------| ----|
-| **POST** | `/` | create a new object |  |
-| **GET** | `/` | find all objects in database |  |
-| **DELETE** | `//{id}` | find an object by the id and delete the entire object |  |
 
 
 ## Example
