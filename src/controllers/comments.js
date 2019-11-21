@@ -1,6 +1,3 @@
-
-<<<<<<< HEAD
-=======
 const ctrl = {
   createComment: (req, res) => {
     console.log("Creating Comment");
@@ -40,19 +37,17 @@ const ctrl = {
   },
   updateComment: (req, res) => {
     console.log("Updating Comment");
-    User.findOne(
-      {
-        handle: req.params.handle,
-        "tweeps.comments._id": req.params.cId
-      }
-    ).then(comments => {
+    User.findOne({
+      handle: req.params.handle,
+      "tweeps.comments._id": req.params.cId
+    }).then(comments => {
       comments.tweeps
         .id(req.params.id)
-        .comments
-        .id(req.params.cId)
-        .commentContent = req.body.commentContent;
+        .comments.id(req.params.cId).commentContent = req.body.commentContent;
       comments.save();
-      console.log(comments.tweeps.id(req.params.id).comments.id(req.params.cId));
+      console.log(
+        comments.tweeps.id(req.params.id).comments.id(req.params.cId)
+      );
       res.json(comments);
     });
   },
@@ -60,19 +55,17 @@ const ctrl = {
     console.log("Reading Comment");
     User.findOne(
       {
-        "tweeps._id":req.params.id,
-        "tweeps.comments._id":req.params.cId
+        "tweeps._id": req.params.id,
+        "tweeps.comments._id": req.params.cId
       },
-      {"tweeps.comments.$":1}
+      { "tweeps.comments.$": 1 }
     ).then(comments => {
-      comments = comments.tweeps[0].comments.filter((val)=>{
-        return val._id.toString() == req.params.cId.toString()
-      })
+      comments = comments.tweeps[0].comments.filter(val => {
+        return val._id.toString() == req.params.cId.toString();
+      });
       res.json(comments[0]);
     });
   }
 };
 
-
 module.exports = ctrl;
->>>>>>> c19fb596092599037ca9c8cdba5e2b8eaea312bb
