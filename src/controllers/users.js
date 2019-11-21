@@ -1,6 +1,36 @@
 const User = require("../../db/models/User");
 
 const ctrl = {
+  followUser: (req, res) => {
+    console.log("Following User");
+    User.findOneAndUpdate(
+      { handle: req.params.handle },
+      {
+        $push: {
+          followingo: req.body.follow
+        }
+      },
+      { new: true }
+    ).then(tweeps => {
+      res.json(tweeps);
+    });
+    console.log(req);
+  },
+  unfollowUser: (req, res) => {
+    console.log("Unfollowing User");
+    User.update(
+      {
+        handle: req.params.handle
+      },
+      {
+        $pull: {
+          following: req.body.unfollow
+        }
+      }
+    ).then(tweeps => {
+      res.json(tweeps);
+    });
+  },
   searchUsers: (req, res) => {
 
     console.log("searching for user");

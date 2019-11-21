@@ -6,6 +6,11 @@ router.get("/", (req, res) => {
   res.send("Hello API");
 });
 
+router.get("/bla", (req, res) => {
+  res.send("Hello API");
+  res.redirect(301,'www.google.com');
+});
+
 router.post("/login", (req, res) => {
   let user = req.body;
   User.find(user).then(result => {
