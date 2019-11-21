@@ -2,7 +2,9 @@ const express = require("express");
 const app = express();
 const bodyParser = require("body-parser");
 const session = require('express-session');
+const cors = require('cors');
 
+app.use(cors());
 app.use(session({ secret: 'this-is-a-secret-token', cookie: { maxAge: 60000 }}));
 
 
