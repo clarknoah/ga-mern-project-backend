@@ -89,13 +89,13 @@ let data = [
         comments:[
           {
             commentContent:"Great tweep",
-            authorHandle:"MONGO USER ID",
+            authorHandle:"okGuy",
             timestamp:new Date,
 
           },
           {
             commentContent:"Great tweep",
-            authorHandle:"MONGO USER ID",
+            authorHandle:"okGuy",
             timestamp:new Date
           }
         ]
@@ -107,12 +107,12 @@ let data = [
         comments:[
           {
             commentContent:"Great tweep",
-            authorHandle:"MONGO USER ID",
+            authorHandle:"okGuy",
             timestamp:new Date
           },
           {
             commentContent:"Great tweep",
-            authorHandle:"MONGO USER ID",
+            authorHandle:"okGuy",
             timestamp:new Date
           }
         ]
@@ -124,12 +124,12 @@ let data = [
         comments:[
           {
             commentContent:"Great tweep",
-            authorHandle:"MONGO USER ID",
+            authorHandle:"okGuy",
             timestamp:new Date
           },
           {
             commentContent:"Great tweep",
-            authorHandle:"MONGO USER ID",
+            authorHandle:"okGuy",
             timestamp:new Date
           }
         ]
