@@ -6,10 +6,12 @@ const Tweep = new Schema({
 
   tweepContent:String,
   authorHandle:String,
+  caretTags:[String],
   date:Number,
   timestamp:Date,
   comments:[Comment],
-  likes:Number
+  likes:Number,
+  userTags:[String]
 
 })
 

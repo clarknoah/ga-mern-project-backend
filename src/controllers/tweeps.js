@@ -1,20 +1,34 @@
 const User = require("../../db/models/User");
 
+function parseTweeps(string){
+  let tags = string.match(/\^[\p{L}]+/ugi);
+  return tags;
+}
+
+function parseUsers(string){
+  let tags = string.match(/@[\p{L}]+/ugi);
+  return tags;
+}
+
 const ctrl = {
   createTweep: (req, res) => {
     console.log("Creating Tweep");
+    let caretTags = parseTweeps(req.body.tweepContent);
+    let obj = req.body;
+    obj.caretTags = caretTags;
+    obj.userTags = parseUsers(req.body.tweepContent);
     User.findOneAndUpdate(
       { handle: req.params.handle },
       {
         $push: {
-          tweeps: req.body
+          tweeps: obj
         }
       },
       { new: true }
     ).then(tweeps => {
+      console.log(tweeps);
       res.json(tweeps);
     });
-    console.log(req);
   },
   deleteTweep: (req, res) => {
     console.log("deleting tweep");

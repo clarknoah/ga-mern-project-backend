@@ -46,12 +46,28 @@ const ctrl = {
           {"tweeps.tweepContent":{$regex : `.*${req.body.handle}.*`}
         }
       }]).then(res2=>{
-        console.log(res2);
-        let final = {
-          users: result,
-          tweeps: res2
-        }
-        res.json(final);
+
+        User.aggregate([
+          {$unwind:"$tweeps"},
+          {$match:
+            {"tweeps.caretTags":req.body.handle}
+        }]).then(res3=>{
+          User.aggregate([
+            {$unwind:"$tweeps"},
+            {$match:
+              {"tweeps.userTags":req.body.handle}
+          }]).then(res4=>{
+
+            console.log(res2);
+            let final = {
+              users: result,
+              tweeps: res2,
+              caretTags:res3,
+              userTags:res4
+            }
+            res.json(final);
+          })
+        })
       })
 
     });

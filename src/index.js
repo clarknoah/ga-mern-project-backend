@@ -15,6 +15,8 @@ app.use(bodyParser.json());
 
 app.use("/doc", express.static("doc"));
 
+app.use("/storybook", express.static("storybook"));
+
 /**
  * @api {get} / Test API
  * @apiName TestApi
