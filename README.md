@@ -36,9 +36,6 @@ A Twitter like clone application with the ability to read, create, delete and up
 #### Tier 1
    Bronze:
    - Send pictures as tweep
-  
-### Initial Design Layout
-<img width="780" alt="tweeper-mock" src="https://media.git.generalassemb.ly/user/22371/files/01cee900-09fb-11ea-9ca7-cad5e8dbe0ae">
 
 ## Features
 - Users can create "Tweeper" accounts
@@ -55,13 +52,21 @@ A Twitter like clone application with the ability to read, create, delete and up
 - Heroku
 
 ## Installing
-```
-Give the example
-```
+Backend: https://github.com/clarknoah/ga-mern-project-backend
+
+- Install MongoDB 
+- Run MongoDB 
+- Seed backend server data
+
+
+Frontend: https://github.com/clarknoah/ga-mern-project-frontend
+
+- Git clone
+- npm install
+- npm run Start
 
 ## Running the tests
-
-Explain how to run the automated tests for this system
+npm test
 
 ## Example
 This is an example object from the API:
@@ -92,8 +97,9 @@ This is an example object from the API:
 ```
 
 ## Deployment
-
 - Deployed using Heroku
+
+- Storybook components : https://tweeper-backend.herokuapp.com/storybook/?path=/story/button--primary
 
 
 ## Authors
