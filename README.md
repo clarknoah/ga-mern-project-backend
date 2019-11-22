@@ -55,13 +55,21 @@ A Twitter like clone application with the ability to read, create, delete and up
 - Heroku
 
 ## Installing
-```
-Give the example
-```
+Backend: https://github.com/clarknoah/ga-mern-project-backend
+
+- Install MongoDB 
+- Run MongoDB 
+- Seed backend server data
+
+
+Frontend: https://github.com/clarknoah/ga-mern-project-frontend
+
+- Git clone
+- npm install
+- npm run Start
 
 ## Running the tests
-
-Explain how to run the automated tests for this system
+npm test
 
 ## Example
 This is an example object from the API:
